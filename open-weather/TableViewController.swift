@@ -25,8 +25,8 @@ class TableViewController: UIViewController {
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "tableToDetails" {
       let details = segue.destinationViewController as! DetailsViewController
-      Container.cities[Container.selectedRow].name
-      details.city = Container.cities[Container.selectedRow]
+      let path = self.tableView.indexPathForSelectedRow!
+      details.city = Container.cities[path.row]
     }
   }
 }
@@ -51,7 +51,6 @@ extension TableViewController: UITableViewDataSource {
 // MARK - UITableViewDelegate
 extension TableViewController: UITableViewDelegate {
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    print("didSelectRowAtIndexPath")
     Container.selectedRow = indexPath.row
   }
 }
