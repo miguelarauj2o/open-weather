@@ -22,7 +22,7 @@ class TableViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return cities.count
+    return 1
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -30,4 +30,7 @@ class TableViewController: UITableViewController {
     
     return cell
   }
+  
+  // MARK - UITableViewDelegate
+  
 }

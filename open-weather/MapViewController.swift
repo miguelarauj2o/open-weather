@@ -28,7 +28,7 @@ class MapViewController: UIViewController {
     
     // ---------> LONG PRESS
     let lpgr = UILongPressGestureRecognizer(target: self, action: "handleLongPress:")
-    lpgr.minimumPressDuration = 1.0
+    lpgr.minimumPressDuration = 0.5
     lpgr.delaysTouchesBegan = true
     lpgr.delegate = self
     self.map.addGestureRecognizer(lpgr)
@@ -51,14 +51,11 @@ class MapViewController: UIViewController {
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "mapToTable" {
       let table = segue.destinationViewController as! TableViewController
-      //table.cities =
+      let latitude = CFloat(locCoord.latitude)
+      let longitude = CFloat(locCoord.longitude)
+      table.cities = DataManager.requestAndParseData(latitude, lon: longitude)
     }
   }
-}
-
-// MARK - MKMapViewDelegate
-extension MapViewController: MKMapViewDelegate {
-  
 }
 
 // MARK - UIGestureRecognizerDelegate

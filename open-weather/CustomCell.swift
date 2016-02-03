@@ -10,8 +10,5 @@ import UIKit
 
 class CustomCell: UITableViewCell {
   
-  
-  override func awakeFromNib() {
-    super.awakeFromNib()
-  }
+
 }

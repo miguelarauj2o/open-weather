@@ -2,22 +2,23 @@
 //  City.swift
 //  open-weather
 //
-//  Created by Miguel Araújo on 2/1/16.
+//  Created by Miguel Araújo on 2/2/16.
 //  Copyright © 2016 Miguel Araújo. All rights reserved.
 //
 
 import Foundation
+import CoreLocation
 
 class City {
   let name: String
-  let max: Float
-  let min: Float
-  let desc: String
+  let description: String
+  let minimum: CFloat
+  let maximum: CFloat
   
-  init(name: String, max: Float, min: Float, desc: String) {
+  internal init(name: String, description: String, min: CFloat, max: CFloat) {
     self.name = name
-    self.max = max
-    self.min = min
-    self.desc = desc
+    self.description = description
+    self.minimum = min
+    self.maximum = max
   }
 }
