@@ -15,7 +15,7 @@ class City {
   let minimum: CFloat
   let maximum: CFloat
   
-  internal init(name: String, description: String, min: CFloat, max: CFloat) {
+  init(name: String, description: String, min: CFloat, max: CFloat) {
     self.name = name
     self.description = description
     self.minimum = min

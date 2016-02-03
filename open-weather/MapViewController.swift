@@ -39,7 +39,8 @@ class MapViewController: UIViewController {
   
   // alert user about app usage
   func alertUser() {
-    let alert = UIAlertController(title: "Aviso", message: "Para selecionar um ponto, basta um toque por mais de um segundo e depois soltar!", preferredStyle: UIAlertControllerStyle.Alert)
+    let msg: String = "Para selecionar um ponto, basta um toque por mais de um segundo e depois soltar!"
+    let alert = UIAlertController(title: "Aviso", message: msg, preferredStyle: UIAlertControllerStyle.Alert)
     alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
     self.presentViewController(alert, animated: true, completion: nil)
   }
@@ -65,7 +66,7 @@ extension MapViewController: UIGestureRecognizerDelegate {
       return
     }
     
-    print("Long Press")
+    print("Looooong press")
     map.removeAnnotations(self.map .annotations) // remove previous annotations
     let point: CGPoint = gestureReconizer.locationInView(self.map)
     self.locCoord = self.map.convertPoint(point, toCoordinateFromView: self.map)

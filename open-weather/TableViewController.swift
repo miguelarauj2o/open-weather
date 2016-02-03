@@ -22,15 +22,12 @@ class TableViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1
+    return cities.count
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! CustomCell
-    
+    cell.city.text = cities[indexPath.row].name
     return cell
   }
-  
-  // MARK - UITableViewDelegate
-  
 }

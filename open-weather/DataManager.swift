@@ -28,8 +28,8 @@ public class DataManager {
           for _ in json {
             let city = City(name: json["list"][0]["name"].string!,
               description: json["list"][0]["weather"][0]["description"].string!,
-              min: json["list"][0]["main"]["temp_min"].float!,
-              max: json["list"][0]["main"]["temp_max"].float!)
+              min: json["list"][0]["main"]["temp_min"].float! - 273.15,
+              max: json["list"][0]["main"]["temp_max"].float! - 273.15)
             cities.append(city)
           }
         }
