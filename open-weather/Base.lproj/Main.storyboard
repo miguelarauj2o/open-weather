@@ -45,7 +45,9 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="i2f-ZO-chx" secondAttribute="bottom" constant="56" id="nCB-hX-xLD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Open Weather " id="XZD-Va-HeN"/>
+                    <navigationItem key="navigationItem" title="Open Weather " id="XZD-Va-HeN">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="xoU-DC-bv8"/>
+                    </navigationItem>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -83,7 +85,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cav-tO-hCv">
                                                     <rect key="frame" x="21" y="11" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>

@@ -42,6 +42,8 @@
 		49F686F11C61948100C28661 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		49F686F21C61948100C28661 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		49F686F61C61A2ED00C28661 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		49F686F91C61B8D500C28661 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		49F686FA1C61B8D500C28661 /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +64,7 @@
 		491527681C5FCAAB00B91B23 = {
 			isa = PBXGroup;
 			children = (
-				491527861C5FCB2600B91B23 /* LICENSE */,
-				491527871C5FCB2600B91B23 /* README.md */,
+				49F686FD1C61B8E400C28661 /* Extra */,
 				4915278B1C5FCBCE00B91B23 /* Frameworks */,
 				491527731C5FCAAC00B91B23 /* open-weather */,
 				491527721C5FCAAC00B91B23 /* Products */,
@@ -137,6 +138,17 @@
 				49F686F61C61A2ED00C28661 /* City.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		49F686FD1C61B8E400C28661 /* Extra */ = {
+			isa = PBXGroup;
+			children = (
+				49F686F91C61B8D500C28661 /* Cartfile */,
+				49F686FA1C61B8D500C28661 /* Cartfile.resolved */,
+				491527861C5FCB2600B91B23 /* LICENSE */,
+				491527871C5FCB2600B91B23 /* README.md */,
+			);
+			name = Extra;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

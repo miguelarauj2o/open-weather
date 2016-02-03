@@ -24,13 +24,11 @@ public class DataManager {
       case .Success:
         if let dataFromNetworking = response.result.value {
           let json = JSON(dataFromNetworking)
-          
-          for _ in json {
-            let city = City(name: json["list"][0]["name"].string!,
-              description: json["list"][0]["weather"][0]["description"].string!,
-              min: json["list"][0]["main"]["temp_min"].float! - 273.15,
-              max: json["list"][0]["main"]["temp_max"].float! - 273.15)
-            cities.append(city)
+          for city in json["list"] {
+            let name = city.1["name"].string
+            let min = (city.1["main"]["temp_min"].string)
+            let max = city.1["main"]["temp_max"].string
+            let desc = city.1["weather"][0]["description"].string
           }
         }
       case .Failure(let error):
@@ -39,5 +37,11 @@ public class DataManager {
     }
     
     return cities
+  }
+}
+
+extension String {
+  var floatValue: Float {
+    return (self as NSString).floatValue
   }
 }

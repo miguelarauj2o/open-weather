@@ -46,7 +46,7 @@ class MapViewController: UIViewController {
   }
   
   @IBAction func search(sender: AnyObject) {
-    self.performSegueWithIdentifier("mapToTable", sender: self)
+    print("button pressed")
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -66,7 +66,6 @@ extension MapViewController: UIGestureRecognizerDelegate {
       return
     }
     
-    print("Looooong press")
     map.removeAnnotations(self.map .annotations) // remove previous annotations
     let point: CGPoint = gestureReconizer.locationInView(self.map)
     self.locCoord = self.map.convertPoint(point, toCoordinateFromView: self.map)
