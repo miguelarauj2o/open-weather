@@ -71,7 +71,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UkL-dE-v5P">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UkL-dE-v5P">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -103,6 +103,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UkL-dE-v5P" firstAttribute="top" secondItem="MCS-WB-TuQ" secondAttribute="topMargin" id="E5f-iR-aNK"/>
+                            <constraint firstItem="UkL-dE-v5P" firstAttribute="leading" secondItem="MCS-WB-TuQ" secondAttribute="leadingMargin" constant="-20" id="eQR-gn-JKC"/>
+                            <constraint firstItem="rh1-Ja-bEK" firstAttribute="top" secondItem="UkL-dE-v5P" secondAttribute="bottom" id="j9L-75-9qZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UkL-dE-v5P" secondAttribute="trailing" constant="-20" id="mIc-eQ-VfJ"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <connections>
