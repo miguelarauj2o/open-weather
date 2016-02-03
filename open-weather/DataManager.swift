@@ -32,6 +32,7 @@ public class DataManager {
             cities.append(city)
           }
           // reload table view
+          Container.cities = cities
           NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
         }
       case .Failure(let error):

@@ -51,10 +51,8 @@ class MapViewController: UIViewController {
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "mapToTable" {
-      let table = segue.destinationViewController as! TableViewController
-      let latitude = CFloat(locCoord.latitude)
-      let longitude = CFloat(locCoord.longitude)
-      table.cities = DataManager.requestAndParseData(latitude, lon: longitude)
+      Container.cities = DataManager.requestAndParseData(CFloat(locCoord.latitude),
+        lon: CFloat(locCoord.longitude))
     }
   }
 }

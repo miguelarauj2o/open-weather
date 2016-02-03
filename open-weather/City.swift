@@ -9,6 +9,11 @@
 import Foundation
 import CoreLocation
 
+struct Container {
+  static var cities = [City]()
+  static var selectedRow: Int = 0
+}
+
 class City {
   let name: String
   let description: String
