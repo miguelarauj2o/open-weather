@@ -16,8 +16,10 @@ Next, install [Carthage] dependencies:
 
 If you don't have Carthage, you can get it with [Homebrew] using the following command:
 
-* `brew update`
-* `brew install carthage`
+```
+brew update
+brew install carthage
+```
 
 #### Dependencies
 
@@ -32,4 +34,4 @@ See LICENSE file
 [Alamofire]: https://github.com/Alamofire/Alamofire
 [SwiftJSON]: https://github.com/SwiftyJSON/SwiftyJSON
 [In Loco Media]: https://github.com/In-Loco-Media
-[Homebrew]: (http://brew.sh/)
+[Homebrew]: http://brew.sh/
