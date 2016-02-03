@@ -25,11 +25,14 @@ public class DataManager {
         if let dataFromNetworking = response.result.value {
           let json = JSON(dataFromNetworking)
           for city in json["list"] {
-            let name = city.1["name"].string
-            let min = (city.1["main"]["temp_min"].string)
-            let max = city.1["main"]["temp_max"].string
-            let desc = city.1["weather"][0]["description"].string
+            let city = City(name: city.1["name"].stringValue,
+              description: city.1["weather"][0]["description"].stringValue,
+              min: city.1["main"]["temp_min"].floatValue,
+              max: city.1["main"]["temp_max"].floatValue)
+            cities.append(city)
           }
+          // reload table view
+          NSNotificationCenter.defaultCenter().postNotificationName("load", object: nil)
         }
       case .Failure(let error):
         print(error)
@@ -37,11 +40,5 @@ public class DataManager {
     }
     
     return cities
-  }
-}
-
-extension String {
-  var floatValue: Float {
-    return (self as NSString).floatValue
   }
 }

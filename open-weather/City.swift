@@ -12,10 +12,10 @@ import CoreLocation
 class City {
   let name: String
   let description: String
-  let minimum: CFloat
-  let maximum: CFloat
+  let minimum: Float
+  let maximum: Float
   
-  init(name: String, description: String, min: CFloat, max: CFloat) {
+  init(name: String, description: String, min: Float, max: Float) {
     self.name = name
     self.description = description
     self.minimum = min

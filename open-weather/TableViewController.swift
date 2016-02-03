@@ -9,11 +9,17 @@
 import UIKit
 
 class TableViewController: UIViewController {
+  @IBOutlet weak var tableView: UITableView!
   
   var cities = [City]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadList:",name:"load", object: nil)
+  }
+  
+  func loadList(notification: NSNotification) {
+    self.tableView.reloadData()
   }
   
   // MARK - UITableViewDataSource

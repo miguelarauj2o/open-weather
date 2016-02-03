@@ -70,6 +70,7 @@ extension MapViewController: UIGestureRecognizerDelegate {
     let point: CGPoint = gestureReconizer.locationInView(self.map)
     self.locCoord = self.map.convertPoint(point, toCoordinateFromView: self.map)
     let dropPin = MKPointAnnotation()
+    
     dropPin.coordinate = locCoord
     dropPin.title = "Ponto Escolhido"
     map.addAnnotation(dropPin)
