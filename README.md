@@ -1,6 +1,7 @@
 # open-weather
 
-Swift app that displays weather information from nearby cities in a particular location.
+Swift app that displays weather information from nearby cities in a particular
+location provided by [Open Weather API]
 
 ## About
 
@@ -24,7 +25,7 @@ brew install carthage
 #### Dependencies
 
 This app uses [Alamofire] for HTTP networking in Swift and [SwiftJSON] to deal
-with JSON data. 
+with JSON data.
 
 ## License
 
@@ -35,3 +36,4 @@ See LICENSE file
 [SwiftJSON]: https://github.com/SwiftyJSON/SwiftyJSON
 [In Loco Media]: https://github.com/In-Loco-Media
 [Homebrew]: http://brew.sh/
+[Open Weather API]: http://openweathermap.org/api
